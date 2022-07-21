@@ -5,6 +5,6 @@ test('it renders a plain HTML string to the page', () => {
       return `<p>Hello, World!</p>`;
     }
   });
-  expect(Paragraph.render()).toReturn(`<p>Hello, World!</p>`);
+  expect(Paragraph.render()).toBe(`<p>Hello, World!</p>`);
 });
 
