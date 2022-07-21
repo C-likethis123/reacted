@@ -3,7 +3,10 @@ function render(element, parentDom) {
   const type = element.type;
   const domElem = document.createElement(type);
   for (const prop in props) {
-    if (prop !== "children") {
+    if (prop.startsWith("on")) {
+      const listener = prop.toLowerCase().substring(2);
+      domElem.addEventListener(listener, props[prop]);
+    } else if (prop !== "children") {
       domElem[prop] = props[prop];
     }
   }
