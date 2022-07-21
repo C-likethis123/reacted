@@ -1,0 +1,16 @@
+{
+  "name": "reacted",
+  "version": "1.0.0",
+  "description": "React Library for education purposes",
+  "main": "index.js",
+  "repository": "https://github.com/C-likethis123/reacted.git",
+  "author": "Chow Jia Ying <chowjiaying211@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^28.1.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
