@@ -1,7 +1,5 @@
 const createReactClass = function(methods) {
-  return {
-    render: methods.render,
-  }
+  return methods.render;
 }
 
 module.exports = createReactClass;
