@@ -23,3 +23,18 @@ test('it renders elements from virtual DOM', () => {
   ReactDOM.render(vElem, rootNode);
   expect(rootNode.outerHTML).toBe(`<div id="root"><div>Hello</div></div>`);
 });
+
+test('it renders react elements', () => {
+  const reactComponent = (props) => ({
+    type: "h1",
+    children: props.title
+  });
+  const vElem = {
+    type: reactComponent,
+    props: {
+      title: "Hi there",
+    }
+  };
+  ReactDOM.render(vElem, rootNode);
+  expect(rootNode.outerHTML).toBe(`<div id="root"><h1>Hi there</h1></div>`);
+});
